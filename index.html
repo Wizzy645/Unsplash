@@ -16,11 +16,11 @@
          alt="Logo"
          class="w-10 h-15 rounded-sm object-cover hover:opacity-90 transition" />
     <!-- Search Bar -->
-    <div class="relative">
+    <div class="relative w-full max-w-md sm:max-w-lg md:max-w-xl">
       <input
         type="text"
         placeholder="Search photos and illustrations"
-        class="pl-10 pr-12 py-2 w-[700px] rounded-full bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300"
+        class="pl-10 pr-12 py-2 w-full rounded-full bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300"
       />
       <!-- Search Icon -->
       <svg class="absolute left-3 top-2.5 w-5 h-5 text-gray-500 hover:text-black transition"
@@ -176,7 +176,93 @@
   </div>
 </div>
 
+  <!-- Hero Section -->
+  <div class="flex flex-col sm:flex-row w-full mt-[70px] relative px-4 sm:px-0">
+    <!-- Container with text and search bar -->
+    <div class="sm:ml-4 md:ml-16 lg:ml-[300px] h-[300px] w-full max-w-[600px] flex flex-col justify-end gap-6 mb-2">
+      
+      <!-- Text Content -->
+      <div class="flex flex-col gap-y-2 px-4">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900">
+          Unsplash
+        </h1>
+
+        <p class="text-base sm:text-lg md:text-xl text-gray-700">
+          The internet’s source for visuals.
+        </p>
+
+        <p class="text-base sm:text-lg md:text-xl text-gray-700">
+          Powered by creators everywhere.
+        </p>
+      </div>
+
+      <!-- Search Input with Icons -->
+      <div class="flex justify-center w-full max-w-[700px] px-4">
+        <div class="flex items-center w-full bg-gray-200 rounded-md px-4 py-3 gap-4">
+          <!-- Search Icon (Left) -->
+          <svg class="w-6 h-6 text-gray-600 hover:text-black transition"
+               xmlns="http://www.w3.org/2000/svg"
+               fill="none"
+               viewBox="0 0 24 24"
+               stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 21l-4.35-4.35M16.5 10.5a6 6 0 11-12 0 6 6 0 0112 0z"/>
+          </svg>
+
+          <!-- Input -->
+          <input
+            type="text"
+            placeholder="Search photos and illustrations"
+            class="flex-1 bg-transparent text-gray-900 placeholder:text-gray-600 text-base sm:text-lg focus:outline-none"
+          />
+
+          <!-- Image Search Icon (Right) -->
+          <img 
+            src="https://static-00.iconduck.com/assets.00/visual-search-icon-512x512-evw237eq.png"
+            alt="Search Image"
+            class="w-6 h-6 cursor-pointer hover:opacity-80 transition"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards on Right Side -->
+      <!-- Vino Image Collection Card -->
+      <div class="w-full max-w-xs sm:max-w-[320px] h-[300px] border rounded-xl overflow-hidden shadow-lg hidden sm:block">
+        <div class="grid grid-cols-2 grid-rows-2 h-40 gap-1">
+          <img src="https://unsplash.com/collections/F1Czgu-jyRA" alt="Grapes" class="object-cover w-full h-full" />
+          <img src="https://unsplash.com/collections/F1Czgu-jyRA" alt="Barrels" class="object-cover w-full h-full" />
+          <img src="https://unsplash.com/collections/F1Czgu-jyRA" alt="Vineyard" class="object-cover w-full h-full" />
+          <img src="https://unsplash.com/collections/F1Czgu-jyRA" alt="Wine" class="object-cover w-full h-full" />
+        </div>
+        <div class="p-4">
+          <h2 class="text-lg font-semibold">Vino</h2>
+          <p class="text-sm text-gray-600">41 images</p>
+        </div>
+      </div>
+
+      <!-- Unsplash+ Promo Card -->
+      <div class="ml-0 sm:ml-7 w-full max-w-xs sm:max-w-[320px] h-[300px] border rounded-xl p-6 shadow-lg flex flex-col justify-between hidden sm:flex">
+        <div>
+          <img class="ml-2" src="./img/Screenshot 2025-05-22 141424.png" alt="">
+          <h2 class="font-semibold text-lg leading-tight mt-4 ml-2">
+            Unlock everything<br />
+            Unsplash+ has to offer.
+          </h2>
+          <p class="text-sm ml-2 text-gray-600 font-semibold mt-1">Cancel anytime.</p>
+        </div>
+        <button class="shadow-lg ml-2 mt-6 bg-black w-[180px] text-white text-sm px-4 py-2 rounded hover:bg-gray-800 transition">
+          Upgrade to <strong>Unsplash+</strong>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="image-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 ml-0 sm:ml-[300px] max-w-7xl flex items-center justify-start mt-[70px] relative">
+  <!-- Random images will load here -->
 </div>
+
+
 <script src="src/app.js"></script>
 
 </body>
